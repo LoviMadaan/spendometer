@@ -16,11 +16,12 @@
         </div>
       <% end %>
     <% else %>
-      <h3 class="mt-4">You don't have any categories yet.</h2>
-    
-    <% end %>
-    <%= link_to 'Add a new Category', new_group_path, class: "btn green btn-outline-info text-white" %>
+      <h3 class="mt-4">You don't have any categories yet.</h2>    
+    <% end %>    
   </div>
+  <div>
+    <%= link_to 'Add a new Category', new_group_path, class: "scan-button" %>
+    </div>
 <% else %>
   <%= render partial: "shared/background" %>
 <% end %> 
