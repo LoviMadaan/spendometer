@@ -19,11 +19,13 @@
         <h5 class="card-title category-name fs-5 stretched-link"><%=@group.name%>'s transactions</h5>
       </div>
     </div>
-    <li class="container-fluid d-flex flex-column align-items-center">
-      <div class="container-fluid d-flex flex-column align-items-center">
-              <p class="card-text d-flex flex-column gray-text">Transaction <%=ind + 1%>: <span class="fw-semibold ms-2"><%=ent.name%></span></p>
-              <p class="card-text d-flex flex-column gray-text">Amount: <span class="fw-semibold ms-2">$<%=ent.amount%></span></p>
-              <p class="card-text d-flex flex-column mt-2"><small class="text-muted"><i class="fa-regular fa-calendar me-2"></i><%=ent.created_at.strftime("%d %b %Y")%> at <%=ent.created_at.strftime("%I.%M %p")%></small></p>
+     <% unless @entities.empty? %>
+        <% @entities.each_with_index do |ent, ind| %>
+          <li class="list-group-item">
+            <div d-flex flex-column>
+              <p class="card-text gray-text">Transaction <%=ind + 1%>: <span class="fw-semibold ms-2"><%=ent.name%></span></p>
+              <p class="card-text gray-text">Amount: <span class="fw-semibold ms-2">$<%=ent.amount%></span></p>
+              <p class="card-text mt-2"><small class="text-muted"><i class="fa-regular fa-calendar me-2"></i><%=ent.created_at.strftime("%d %b %Y")%> at <%=ent.created_at.strftime("%I.%M %p")%></small></p>
             </div>
           </li>
         <% end %>
@@ -34,3 +36,4 @@
   </div>
   <%= link_to 'Scan', new_entity_path, class: "scan-button" %>
 </div>
+ 
