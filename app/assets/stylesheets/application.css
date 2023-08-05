@@ -66,3 +66,27 @@ body {
 .gray-text {
   color: rgb(75, 82, 90);
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  font-size: 16px;
+}
+
+.scan-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #5fb523;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 8%;
+}

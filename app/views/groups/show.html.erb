@@ -1,3 +1,16 @@
+<div class="container-fluid primary-color text-white text-center mb-2 py-2 d-flex align-items-center">
+<a href="<%= groups_path %>">
+  <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.048"></g>
+    <g id="SVGRepo_iconCarrier">
+      <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="#ffffff" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+  </svg>
+  </a>
+  <h2 class="text-center flex-grow-1">category</h2>
+</div>
+
 <div class="container-fluid d-flex flex-column align-items-center">
   <div class="card" style="width: 95%;">
     <div class="card-header">
@@ -6,18 +19,11 @@
         <h5 class="card-title category-name fs-5 stretched-link"><%=@group.name%>'s transactions</h5>
       </div>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item d-flex justify-content-between bg-light">
-        <p class="m-1 gray-text fs-5">TOTAL PAYMENT</p>
-        <p class="fw-semibold m-1 gray-text fs-5">&<%= @group.entities.sum(:amount) %></p>
-      </li>
-      <% unless @entities.empty? %>
-        <% @entities.each_with_index do |ent, ind| %>
-          <li class="list-group-item">
-            <div d-flex flex-column>
-              <p class="card-text gray-text">Transaction <%=ind + 1%>: <span class="fw-semibold ms-2"><%=ent.name%></span></p>
-              <p class="card-text gray-text">Amount: <span class="fw-semibold ms-2">$<%=ent.amount%></span></p>
-              <p class="card-text mt-2"><small class="text-muted"><i class="fa-regular fa-calendar me-2"></i><%=ent.created_at.strftime("%d %b %Y")%> at <%=ent.created_at.strftime("%I.%M %p")%></small></p>
+    <li class="container-fluid d-flex flex-column align-items-center">
+      <div class="container-fluid d-flex flex-column align-items-center">
+              <p class="card-text d-flex flex-column gray-text">Transaction <%=ind + 1%>: <span class="fw-semibold ms-2"><%=ent.name%></span></p>
+              <p class="card-text d-flex flex-column gray-text">Amount: <span class="fw-semibold ms-2">$<%=ent.amount%></span></p>
+              <p class="card-text d-flex flex-column mt-2"><small class="text-muted"><i class="fa-regular fa-calendar me-2"></i><%=ent.created_at.strftime("%d %b %Y")%> at <%=ent.created_at.strftime("%I.%M %p")%></small></p>
             </div>
           </li>
         <% end %>
@@ -26,5 +32,5 @@
       <% end %>
     </ul>
   </div>
-  <%= link_to 'Add a new transaction', new_entity_path, class: "btn green btn-outline-info text-white" %>
+  <%= link_to 'Scan', new_entity_path, class: "scan-button" %>
 </div>
