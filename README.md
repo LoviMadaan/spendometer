@@ -81,8 +81,6 @@ To run the Rails server, in the terminal:
 - LinkedIn: [LoviMadaan](https://www.linkedin.com/in/lovi-madaan)
 
 
-
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

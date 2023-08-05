@@ -85,6 +85,4 @@ test:
 #
 production:
   <<: *default
-  database: spendometer_production-2
-  username: spendometer
-  password: <%= ENV["SPENDOMETER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
