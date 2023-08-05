@@ -8,10 +8,10 @@ RSpec.describe 'Groups', type: :feature do
     fill_in 'Email', with: 'steve@example.com'
     fill_in 'Password', with: '123456'
     click_button 'Log in'
-  end  
+  end
 
   it 'should not have any categories yet' do
-    expect(page).to have_content("You don\'t have any categories yet.")
+    expect(page).to have_content("You don't have any categories yet.")
   end
 
   it 'should show the new category page' do

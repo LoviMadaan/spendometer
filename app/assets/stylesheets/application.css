@@ -14,15 +14,15 @@
  *= require_self
  */
 
- @import url("href=https://fonts.googleapis.com/css?family=Trirong");
+@import url("href=https://fonts.googleapis.com/css?family=Trirong");
 
- body {
+body {
   font-family: Georgia, 'Times New Roman', Times, sans-serif;
-  color: rgb(87, 95, 104);
+  color: rgb(99, 105, 112);
 }
 
 .primary-color {
-  background: rgb(66, 106, 151);
+  background: rgb(81, 103, 226);
 }
 
 .green {
@@ -35,11 +35,6 @@
 
 .background-screen {
   height: 100vh;
-  background-image: url('assets/images/background.webp');
-}
-
-.background-logo {
-  font-family: "Trirong", serif;
 }
 
 .menu-btn {

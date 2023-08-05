@@ -4,9 +4,10 @@ class EntitiesController < ApplicationController
   end
 
   def create
-    @groups = params[:spending][:group_id].drop(1)
+    @groups = params[:entity][:group_id].drop(1)
     @groups.each do |group|
-      @entity = Entity.new(name: params[:entity][:name], amount: params[:entity][:amount], group_id: group.to_i, user_id: current_user.id)
+      @entity = Entity.new(name: params[:entity][:name], amount: params[:entity][:amount], group_id: group.to_i,
+                           user_id: current_user.id)
       @entity.save
     end
     redirect_to group_path(@groups.first.to_i)
