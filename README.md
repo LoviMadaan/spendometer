@@ -29,11 +29,11 @@ To get a local copy up and running follow these simple example steps.
 `cd budget-app`
 
 ## Live demo:
-You can check out the live demo [here]().
+You can check out the live demo [here](https://spendometer2-q5xy.onrender.com/).
 
 ## Presentation Video 
 
-You can watch a video presentation of the budget application[here]()
+You can watch a video presentation of the budget application[here](https://drive.google.com/file/d/1gtg0mrCvog_8QYwIk4KXzyYJHMRaTrXo/view?usp=sharing)
 
 ## Entity Relationship Diagram
 <img src="https://user-images.githubusercontent.com/50721479/190148367-be9ac1c0-2d96-4049-aea3-8e5d75c1f5fa.png" width="600">
@@ -79,8 +79,6 @@ To run the Rails server, in the terminal:
 - GitHub: [LoviMadaan](https://github.com/LoviMadaan)
 - Twitter: [@lovinarang](https://twitter.com/lovinarang)
 - LinkedIn: [LoviMadaan](https://www.linkedin.com/in/lovi-madaan)
-
-
 
 
 ## 🤝 Contributing
