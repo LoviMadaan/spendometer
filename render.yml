@@ -5,7 +5,7 @@ databases:
 
 services:
   - type: web
-    name: Spendometer
+    name: spendometer
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
